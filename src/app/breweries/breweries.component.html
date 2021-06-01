@@ -1,0 +1,23 @@
+<body>
+
+    <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>street</th>
+            <th>city</th>
+            <th>phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let brewerie of breweries">
+              <td>{{ brewerie.name }}</td>
+              <td>{{ brewerie.street }}</td>
+              <td>{{ brewerie.city }}</td>
+              <td>{{ brewerie.phone }}</td>
+              <td> <a [routerLink]="['/single',brewerie.id]" routerLinkActive="router-link-active" > see </a> </td>
+          </tr>
+        </tbody>
+      </table>
+
+</body>
